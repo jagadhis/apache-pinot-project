@@ -1,0 +1,21 @@
+executionFrameworkSpec:
+  name: 'standalone'
+  segmentGenerationJobRunnerClassName: 'org.apache.pinot.plugin.ingestion.batch.standalone.SegmentGenerationJobRunner'
+  segmentTarPushJobRunnerClassName: 'org.apache.pinot.plugin.ingestion.batch.standalone.SegmentTarPushJobRunner'
+jobType: SegmentCreationAndTarPush
+inputDirURI: 'file:///data'
+includeFileNamePattern: 'glob:**/Electric_Vehicle_Population_Data.json'
+outputDirURI: 'file:///output'
+overwriteOutput: true
+pinotFSSpecs:
+  - scheme: file
+    className: org.apache.pinot.spi.filesystem.LocalPinotFS
+recordReaderSpec:
+  dataFormat: 'json'
+  className: 'org.apache.pinot.plugin.inputformat.json.JSONRecordReader'
+tableSpec:
+  tableName: 'electric_vehicles'
+  schemaURI: 'file:///config/scripts/electric_vehicles_schema.json'
+  tableConfigURI: 'file:///config/scripts/electric_vehicles_table.json'
+pinotClusterSpecs:
+  - controllerURI: 'http://localhost:9000'

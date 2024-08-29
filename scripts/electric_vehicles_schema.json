@@ -1,0 +1,76 @@
+{
+  "schemaName": "electric_vehicles",
+  "dimensionFieldSpecs": [
+    {
+      "name": "VIN_(1-10)",
+      "dataType": "STRING"
+    },
+    {
+      "name": "County",
+      "dataType": "STRING"
+    },
+    {
+      "name": "City",
+      "dataType": "STRING"
+    },
+    {
+      "name": "State",
+      "dataType": "STRING"
+    },
+    {
+      "name": "Postal_Code",
+      "dataType": "INT"
+    },
+    {
+      "name": "Model_Year",
+      "dataType": "INT"
+    },
+    {
+      "name": "Make",
+      "dataType": "STRING"
+    },
+    {
+      "name": "Model",
+      "dataType": "STRING"
+    },
+    {
+      "name": "Electric_Vehicle_Type",
+      "dataType": "STRING",
+      "singleValueField": false
+    },
+    {
+      "name": "Clean_Alternative_Fuel_Vehicle_(CAFV)_Eligibility",
+      "dataType": "STRING"
+    },
+    {
+      "name": "Electric_Range",
+      "dataType": "INT"
+    },
+    {
+      "name": "Base_MSRP",
+      "dataType": "INT"
+    },
+    {
+      "name": "Legislative_District",
+      "dataType": "INT"
+    },
+    {
+      "name": "DOL_Vehicle_ID",
+      "dataType": "LONG"
+    },
+    {
+      "name": "Vehicle_Location",
+      "dataType": "STRING"
+    },
+    {
+      "name": "Electric_Utility",
+      "dataType": "STRING"
+    },
+    {
+      "name": "2020_Census_Tract",
+      "dataType": "LONG"
+    }
+  ],
+  "metricFieldSpecs": [],
+  "dateTimeFieldSpecs": []
+}
