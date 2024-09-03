@@ -19,3 +19,6 @@
 **- To replace NaN with Null in Dataset**
 
 `sed -i 's/NaN/null/g' Electric_Vehicle_Population_Data.json`
+
+**-- for windows**
+`(Get-Content Electric_Vehicle_Population_Data.json) -replace 'NaN', 'null' | Set-Content Electric_Vehicle_Population_Data.json`
