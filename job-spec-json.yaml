@@ -6,11 +6,11 @@
   },
   "jobType": "SegmentCreationAndTarPush",
   "inputDirURI": "file:///configs",
-  "includeFileNamePattern": "glob:*/.csv",
+  "includeFileNamePattern": "glob:**/*.json",
   "outputDirURI": "file:///configs/output",
   "overwriteOutput": true,
   "pushJobSpec": {
-    "pushFileNamePattern": "glob:*/.tar.gz"
+    "pushFileNamePattern": "glob:**/*.tar.gz"
   },
   "pinotFSSpecs": [
     {
@@ -19,18 +19,17 @@
     }
   ],
   "recordReaderSpec": {
-    "dataFormat": "csv",
-    "className": "org.apache.pinot.plugin.inputformat.csv.CSVRecordReader",
-    "configClassName": "org.apache.pinot.plugin.inputformat.csv.CSVRecordReaderConfig"
+    "dataFormat": "json",
+    "className": "org.apache.pinot.plugin.inputformat.json.JSONRecordReader"
   },
   "tableSpec": {
     "tableName": "electric_vehicles",
-    "schemaURI": "http://localhost:9000/tables/electric_vehicles/schema",
-    "tableConfigURI": "http://localhost:9000/tables/electric_vehicles"
+    "schemaURI": "http://pinot-controller:9000/tables/electric_vehicles/schema",
+    "tableConfigURI": "http://pinot-controller:9000/tables/electric_vehicles"
   },
   "pinotClusterSpecs": [
     {
-      "controllerURI": "http://localhost:9000"
+      "controllerURI": "http://pinot-controller:9000"
     }
   ]
 }
