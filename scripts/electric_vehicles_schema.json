@@ -33,10 +33,11 @@
       "name": "Model",
       "dataType": "STRING"
     },
-    {
+   {
       "name": "Electric_Vehicle_Type",
       "dataType": "STRING",
-      "singleValueField": false
+      "singleValueField": true,
+      "noDictionary": false
     },
     {
       "name": "Clean_Alternative_Fuel_Vehicle_(CAFV)_Eligibility",
